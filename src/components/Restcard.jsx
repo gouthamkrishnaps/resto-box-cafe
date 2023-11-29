@@ -3,23 +3,26 @@ import { Col, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-function Restcard() {
+function Restcard({restaurent}) {
+ 
+  /* console.log(restaurent.photograph); */
+
   return (
-    <div>
+    <div className='p-2'>
         <Link to={'/restview'} style={{textDecoration:'none'}}>
-            <Card style={{ width: '100%' }}>
-            <Card.Img width={'100%'} height={'300px'} variant="top" src="https://www.chicken.ca/wp-content/uploads/2020/09/Big-Juicy-Burgers.jpg" />
+            <Card className='restcard rounded-5 shadow' style={{ width: '100%' ,backgroundColor:'white'}}>
+            <Card.Img className='p-2 rounded-5' width={'100%'} height={'300px'} variant="top" src={restaurent.photograph} />
             <Card.Body className='text-center'>
-                <Card.Title>Card Title</Card.Title>
+                <h5  className='' style={{color:'black'}}>{restaurent.name}</h5>
                 <Row>
                     <Col>
                     <Card.Text>
-                    Some quick 
+                    {restaurent.cuisine_type} 
                     </Card.Text>
                     </Col>
                     <Col>
                     <Card.Text>
-                    Some quick 
+                    {restaurent.neighborhood}
                     </Card.Text>
                     </Col>
                 </Row>

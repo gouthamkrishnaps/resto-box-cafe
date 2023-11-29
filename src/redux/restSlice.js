@@ -8,7 +8,7 @@ import axios from "axios";
 
 //api call using thunk
 export const fetchRestaurent = createAsyncThunk("restaurentList/fetchRestaurent",()=>{
-    const result = axios.get('/restaurant.json').then(response=>response.data)
+    const result = axios.get('/restaurant.json').then(response=>response.data.restaurants)
     console.log(result);
     return result
 })  

@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchRestaurent } from '../redux/restSlice'
 
 function Home() {
-    const  allRestuarent = useSelector((state)=> state.restSlice.allRestuarent)
-    console.log(allRestuarent);
+    const  allRestaurent = useSelector((state)=>state.restSlice.allRestaurent)
+    console.log(allRestaurent);
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(fetchRestaurent())
@@ -14,18 +14,12 @@ function Home() {
   return (
     <div >
         <Row className='p-5'>
-            <Col className='' md={6} lg={3}>
-                <Restcard/>
-            </Col>
-            <Col className='' md={6} lg={3}>
-                <Restcard/>
-            </Col>
-            <Col className='' md={6} lg={3}>
-                <Restcard/>
-            </Col>
-            <Col className='' md={6} lg={3}>
-                <Restcard/>
-            </Col>
+        {allRestaurent?.length>0?
+            allRestaurent?.map((restaurent)=>(<Col className='' md={6} lg={3}>
+            <Restcard restaurent={restaurent}/>
+        </Col>)):
+        <p className='text-danger fw-bold'>nothing to display</p>
+        }
         </Row>
     </div>
   )

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className='p-5 text-light' style={{backgroundColor:'forestgreen'}}>
+    <div className='p-5 text-light' style={{backgroundColor:'rgb(58, 58, 78)'}}>
         <div className='container mt-3'>
             <Row className='footer-row d-flex justify-content-between align-items-center gap-2'>
                 <Col>
-                    <h6><i class="fa-solid fa-users"></i> RESTAURENT BOX</h6>
+                    <h6><i class="fa-solid fa-users"></i> RESTO BOX</h6>
                     <span style={{textAlign:'justify'}}>Lorem ipsum dolor sit adipisicing elit. Facere eligendi cupiditate doloremque accusantium deleniti dolores fugiat ipsum dolor sit adipisicing elit.</span>
                 </Col>
                 <Col className='d-flex flex-column'>

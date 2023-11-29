@@ -11,14 +11,14 @@ function Review() {
                 Click to See Reviews
             </Button>
             <Collapse in={open}>
-        <div className='my-2'>
-            <hr />
-            <h5>Name and Date</h5>
-            <h5>Rating</h5>
-            <p>Description</p>
-        </div>
-        </Collapse>
-    </>
+            <div className='my-2'>
+                <hr />
+                <h5>Name and Date</h5>
+                <h5>Rating</h5>
+                <p>Description</p>
+            </div>
+            </Collapse>
+        </>
   )
 }
 

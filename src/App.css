@@ -4,3 +4,10 @@
 body{
   overflow-x: hidden;
 }
+.restcard{
+  transition: 500ms;
+}
+.restcard:hover{
+  transition: 500ms;
+  transform: scale(0.92);
+}

@@ -17,7 +17,7 @@ function RestView() {
                 </Col>
                 <Col lg={9}>
                     <hr />
-                    <h4 className='text-center'><span className='text-warning'>RESTAURENT</span> DETIALS</h4>
+                    <h4 className='text-center fw-bold'><span className='text-warning'>RESTAURANT</span> DETIALS</h4>
                     <hr />
                     <ListGroup >
                         <ListGroup.Item> <h5 className='text-center py-2'>Resto Cafe Kakkanad</h5></ListGroup.Item>
